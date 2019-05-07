@@ -13,12 +13,19 @@ $$i \partial_t \psi = H \psi$$
 ## Section 2: Case for HPC-EUROPA funding
 
 ### Research benefits of accessing HPC-Europa HPC systems[^2]
+![experimental setup](https://raw.githubusercontent.com/berceanu/hpc-europa3-application/master/images/exp_setup.png?token=ABBTTGTHLCCLW345XORQSPS42GSS2)
 
 ### Research benefits of interacting with my local scientific host
 
 ## Section 3: Weekly-based Project Workplan
 
 ### List of specific objectives and approximate timeline
+
+Objective | Timeline
+----------|---------
+fbpic simulation | week 1
+
+
 
 [^1]: The whole proposal should contain around 16k characters, or roughly 5 pages.
 [^2]: Justify the necessity to *simulate larger systems* for the problem being
