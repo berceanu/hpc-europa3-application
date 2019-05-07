@@ -24,7 +24,14 @@ $$i \partial_t \psi = H \psi$$
 
 Objective | Timeline
 ----------|---------
-fbpic simulation | week 1
+fbpic parameter scan | week 1
+task | week 2
+task | week 3
+task | week 4
+task | week 5
+task | week 6
+task | week 7
+task | week 8
 
 [^1]: The whole proposal should contain around 16k characters, or roughly 5 pages.
 [^2]: Justify the necessity to *simulate larger systems* for the problem being
