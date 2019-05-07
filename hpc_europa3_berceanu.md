@@ -18,7 +18,7 @@ $$i \partial_t \psi = H \psi$$
 
 ### 2.2. Research benefits of interacting with my local scientific host
 
-## 3. Weekly-based Project Workplan
+## 3. Weekly-based project workplan
 
 ### 3.1. List of specific objectives and approximate timeline
 
