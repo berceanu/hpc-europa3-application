@@ -1,27 +1,24 @@
-% HPC-Europa3 Application
+# Laser-wakefield radiation sources as diagnostic tools  
 
-**Note**: each section should contain > 4000 characters.
+## Section 1: Background information[^1]
 
-## Project Proposal
+### Status of my research activities
 
-### Background information
+### Project objectives
 
-#### Status of my research activities
+### Contribution to research field development
 
-#### Project objectives
+## Section 2: Case for HPC-EUROPA funding
 
-#### Contribution to research field development
+### Research benefits of accessing HPC-Europa HPC systems[^2]
 
-### Case for HPC-EUROPA funding
+### Research benefits of interacting with my local scientific host
 
-#### Research benefits of accessing HPC-Europa HPC systems
-
-**Note**: justify the necessity to *simulate larger systems* for the problem being
-studied and demonstrate that the resources to which you currently have access are
-*inadequate* for this purpose
-
-#### Research benefits of interacting with my local scientific host
-
-## Weekly-based Project Workplan
+## Section 3: Weekly-based Project Workplan
 
 ### List of specific objectives and approximate timeline
+
+[^1]: The whole proposal should contain around 16k characters, or roughly 5 pages.
+[^2]: Justify the necessity to *simulate larger systems* for the problem being
+studied and demonstrate that the resources to which you currently have access are
+*inadequate* for this.
