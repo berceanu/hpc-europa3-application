@@ -1,26 +1,27 @@
-# HPC-Europa3 Application
+% HPC-Europa3 Application
+
+**Note**: each section should contain > 4000 characters.
 
 ## Project Proposal
 
 ### Background information
 
-(4000 characters): current status of your research
-activities, the objectives you set at the start of this project and more
-generally, how your work will contribute to developments in your research
-field
+#### Status of my research activities
+
+#### Project objectives
+
+#### Contribution to research field development
 
 ### Case for HPC-EUROPA funding
 
-(4000 characters): demonstrate how your research
-would benefit from accessing HPC-Europa HPC systems or interacting with your
-local scientific host. If you wish to simulate larger systems than you
-currently are you should 1. justify the necessity to simulate larger systems
-for the problem being studied; and 2. demonstrate that the resources to which
-you currently have access are inadequate for this purpose.
+#### Research benefits of accessing HPC-Europa HPC systems
 
-## Project Workplan
+**Note**: justify the necessity to *simulate larger systems* for the problem being
+studied and demonstrate that the resources to which you currently have access are
+*inadequate* for this purpose
 
-(4000 characters): Make sure that in your workplan is
-included a list of specific objectives and an approximate timeline for these,
-as this is very important. We strongly encourage you to propose a
-weekly-based workplan.
+#### Research benefits of interacting with my local scientific host
+
+## Weekly-based Project Workplan
+
+### List of specific objectives and approximate timeline
