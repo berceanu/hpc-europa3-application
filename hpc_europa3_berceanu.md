@@ -4,6 +4,8 @@
 
 ### Status of my research activities
 
+$$i \partial_t \psi = H \psi$$
+
 ### Project objectives
 
 ### Contribution to research field development
