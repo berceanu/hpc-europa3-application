@@ -33,6 +33,17 @@ task | week 6
 task | week 7
 task | week 8
 
+- full-scale `PIConGPU` simulation
+- scan of the parameter space via `fbpic` 
+- estimation using the scaling laws
+- installation of `fbpic` and `PIConGPU` on the cluster
+- `PIConGPU` test runs
+- convergence testing
+- data analysis
+- writing up the results
+
+On *week 1*, I will ...
+
 [^1]: The whole proposal should contain around 16k characters, or roughly 5 pages.
 [^2]: Justify the necessity to *simulate larger systems* for the problem being
 studied and demonstrate that the resources to which you currently have access are
