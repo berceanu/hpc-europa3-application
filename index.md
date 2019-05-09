@@ -8,6 +8,8 @@ $$i \partial_t \psi = H \psi$$
 
 ### 1.2. Project objectives
 
+We would like to improve the trapping of the electron bunch, and measure the angular distribution for measuring the 2D emittance and spatial profile.
+
 
 ### 1.3. Contribution to research field development
 
