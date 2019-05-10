@@ -120,10 +120,21 @@ plasma density. Another appoach is to optimize the laser and plasma
 parameters to obtain a better self-guiding of the laser (above the critical
 power) inside the gas jet, leading to an incresed propagation distance.
 
+The experimental developments are strongly coupled with large-scale numeric
+simulations, which serve a dual purpose. The first one is to guide the choice
+of laser (energy, duration, beam profile etc) and plasma (density, profile
+etc) parameters for the experimental campaing in order to optimize the
+accelerated electron beam's quality and shot-to-shot reproducibility, as well
+as maximize its energy. The second purpose of the numeric modelling would be
+to confront and interpret the experimental data, leading to new physical
+insights.
+
 ### 1.3. Contribution to research field development
 
 - publication
-- release simulation data and analysis tools open source
+- release simulation data in self-documented format such as hdf5 + OpenPMD
+- release developed analysis tools open source
+- if time permits, contribute to PIC codes
 - develop technique for measuring the angularly-resolved betatron emission spectrum?
 
 ## 2. Case for HPC-Europa3 funding
@@ -133,9 +144,22 @@ power) inside the gas jet, leading to an incresed propagation distance.
 - increased propagation length
 - calculate radiation spectrum
 
-
-
 ### 2.2. Research benefits of interacting with my local scientific host
+
+I've met some of the members of the INFN-LNF SPARC LAB at at the recent CERN
+"High Gradient Wakefield Accelerator" school in Sesimbra (Portugal) and we
+soon discovered similar research topics with my group at ELI-NP. One of the
+key distinguishing features of SPARC LAB is the integration of a high-power,
+ultrashort Ti:Saph laser system (FLAME) with a high-brightness
+photo-injector. Together with a recently-developed hydrogen discharge
+capillary, this allows for very flexible setups in both laser wakefield
+(LWFA) as well as plasma wakefield (PWFA) experiments. Meanwhile, the ELI-NP
+project is still in its implementation phase, with preliminary experiments being
+scheduled for later this year, so we would definately benefit from the
+extensive expertise of the Frascati group in the design and planning of
+future experiments. 
+
+In fact, I envision this grant as the perfect opportunity to start a collabo 
 
 ## 3. Weekly-based project workplan
 
