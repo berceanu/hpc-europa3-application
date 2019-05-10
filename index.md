@@ -173,7 +173,7 @@ extensive expertise of the Frascati group in the design and planning of
 future experiments. On the other hand, both groups would benefit from
 large-scale laser-plasma simulations using the particle-in-cell method for a
 better understanding of the fast dynamical phenomena that can't usually be
-resolved by conventional diagnostic tools. I envision this grant to be the
+resolved by conventional diagnostic tools. We envision this grant to be the
 perfect opportunity to start a long-lasting collaboration between our
 research groups, with subsequent bilateral visits.
 
