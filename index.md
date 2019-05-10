@@ -157,39 +157,69 @@ capillary, this allows for very flexible setups in both laser wakefield
 project is still in its implementation phase, with preliminary experiments being
 scheduled for later this year, so we would definately benefit from the
 extensive expertise of the Frascati group in the design and planning of
-future experiments. 
-
-In fact, I envision this grant as the perfect opportunity to start a collabo 
+future experiments. On the other hand, both groups would benefit from
+large-scale laser-plasma simulations using the particle-in-cell method for a
+better understanding of the fast dynamical phenomena that can't usually be
+resolved by conventional diagnostic tools. I envision this grant to be the
+perfect opportunity to start a long-lasting collaboration between our
+research groups, with subsequent bilateral visits.
 
 ## 3. Weekly-based project workplan
 
 ### 3.1. List of specific objectives and approximate timeline
 
-Objective | Timeline
-----------|---------
-fbpic parameter scan | week 1
-task | week 2
-task | week 3
-task | week 4
-task | week 5
-task | week 6
-task | week 7
-task | week 8
+On *week 1*, I will get better aquinted with the research activities and
+personnel at SPARC LAB, sort out any unforseen logistic problems and proceed
+to install the `fbpic` and `PIConGPU` particle-in-cell codes on the cluster
+provided by hpc-Europa and perform some preliminary test runs, comparing
+results to well-know analytical solutions.
 
-- full-scale `PIConGPU` simulation
-- scan of the parameter space via `fbpic` (envelope model, cylindrical symmetry)
-- post-processing trajectories to extract betatron spectrum
-- estimation using the scaling laws (Lu for electrons and Thomas for betatron)
-- installation of `fbpic` and `PIConGPU` on the cluster
-- `PIConGPU` test runs
-- convergence testing
-- data analysis
-- writing up the results
-- reproduce previour results (2 published papers)
-- simulations for future ELI experiments
+On *week 2*, I will calibrate and test the newly installed PIC codes by
+reproducing the previously published results from [A. Curcio et. al, Appl.
+Phys. Lett. 111, 133105 (2017)] and [A. Curcio et. al, Phys. Rev. Accel.
+Beams 20, 012801 (2017)]. This would also allow a better understanding of the
+underlying physical assumptions of the previously used model.
 
+On *week 3*, I will estimate the optimally matched laser and plasma
+parameters following the analytical model of W. Lu et. al [W. Lu et. al,
+Phys. Rev. ST Accel. Beams 10 (6) 061301, (2007)]. Special consideration has
+to be given to the case of using a the discharge capillary. Furthermore, the
+betatron radiation spectrum can be estimated via the scaling laws developed
+by A. Thomas [A. G. Thomas, Physics of Plasmas 17 (5) 056708 (2010)].
 
-On *week 1*, I will ...
+On *week 4*, I will proceed with a large-scale scan of the parameter space
+using the `fbpic` code. `fbpic` is a spectral, quasi-3D PIC code which also
+has a reduced envelope model for the laser and as such, is well suited to
+quick parameter scans of setups which benefit from cylindrical symmetry.
+Typically, uses a large number of GPUs simulatenously for such a scan, each
+GPU assigned to an individual start-to-end simulation for a given parameter
+set. Since the parameter sets are independent, there is no need for inter-GPU
+communication in this case. However, since the `fbpic` code doesn't (yet) contain a
+plugin for calculating the far-field emitted radiation spectrum, the betatron
+spectrum will have to be calculated during post-processing, from the recorded
+electron trajectories, using the Liénard–Wiechert potentials. This requires a
+separate code, for which a good starting candidate would be
+[`synchrad`](https://github.com/hightower8083/synchrad), perhaps with
+additional further development.
+
+On *weeks 5-8* I will undertake full-scale PIC simulation using `PIConGPU`,
+for the most promising parameter sets discovered during *week 4*. The
+production runs will be followed by converge testing and post-processing of
+the simulation results, in close interaction with the experimental and
+simulation teams from SPARC LAB. Any data analysis scripts developed in the
+process, as well as the simulation data itself will be released open-source
+for the benefit of the community. Also during this time I plan to start some
+simulations for preliminary ELI-NP experiments which might share some of the
+previously-described workflow.
+
+On *week 8* I will start writing down a draft (eventually leading to
+peer-reviewed publication) containing the analyzed data up to that point and
+any preliminary conclusions that might be reached by combining experimental
+data with the results of numerical modelling.
+
+The numerical simulations will then continue until the expiration date of the
+HPC cluster account, ~6 months after the initial visit.
+
 
 [^1]: The whole proposal should contain around 16k characters, or roughly 5 pages.
 [^2]: Justify the necessity to *simulate larger systems* for the problem being
