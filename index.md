@@ -6,7 +6,7 @@ Document source on [GitHub](https://github.com/berceanu/hpc-europa3-application)
 
 ### 1.1. Status of my research activities
 
-I have completed my PhD in the field of theoretical condensed matter physics
+I completed my PhD in the field of theoretical condensed matter physics
 at Universidad Autonoma (Spain) and am currently a postdoctoral researcher at
 Extreme Light Infrastructure - Nuclear Physics (Romania). In my new role, I
 am focusing on theoretical/computational aspects of high power laser-plasma
@@ -141,6 +141,8 @@ insights.
 
 ### 2.1. Research benefits of accessing HPC-Europa systems[^2]
 
+- my previous HPC experience
+
 We estimate that the large scale simulations relevant for experiments will
 make use of ... nodes, with a total of ... Tesla ... cards. The typical
 runtime per simulation should be between 1 week to 10 days for one set of
@@ -182,12 +184,12 @@ research groups, with subsequent bilateral visits.
 On *week 1*, I will get better aquinted with the research activities and
 personnel at SPARC LAB, sort out any unforseen logistic problems and proceed
 to install the `fbpic` and `PIConGPU` particle-in-cell codes on the cluster
-provided by hpc-Europa and perform some preliminary test runs, comparing
+provided by hpc-Europa and perform preliminary test runs, comparing
 results to well-know analytical solutions.
 
 On *week 2*, I will calibrate and test the newly installed PIC codes by
 reproducing the previously published results from [A. Curcio et. al, Appl.
-Phys. Lett. 111, 133105 (2017)] and [A. Curcio et. al, Phys. Rev. Accel.
+Phys. Lett. 111, 133105 (2017), A. Curcio et. al, Phys. Rev. Accel.
 Beams 20, 012801 (2017)]. This would also allow a better understanding of the
 underlying physical assumptions of the previously used model.
 
@@ -213,7 +215,7 @@ separate code, for which a good starting candidate would be
 [`synchrad`](https://github.com/hightower8083/synchrad), perhaps with
 additional further development.
 
-On *weeks 5-8* I will undertake full-scale PIC simulation using `PIConGPU`,
+On *weeks 5-8* I will undertake full-scale PIC simulations using `PIConGPU`,
 for the most promising parameter sets discovered during *week 4*. PIConGPU
 [Bussmann et. al, Proc. Int. Conf. on HPC, Networking, Storage and Analysis,
 (2013)], a fully relativistic 3D3V code running on graphic processing units
@@ -226,13 +228,15 @@ communicate between various GPUs and Alpaka, an abstraction library for
 parallel kernel acceleration based on CUDA, at the single-GPU level. Due to
 the large memory required for simulating scenarios relevant to the current
 laser-plasma experiments, PIConGPU has to be run on multiple GPUs, with the
-simulation domain split up between them. The production runs will be followed
-by converge testing and post-processing of the simulation results, in close
-interaction with the experimental and simulation teams from SPARC LAB. Any
-data analysis scripts developed in the process, as well as the simulation
-data itself will be released open-source for the benefit of the community.
-Also during this time I plan to start some simulations for preliminary ELI-NP
-experiments which might share some of the previously-described workflow.
+simulation domain split up between them. 
+
+The production runs will be followed by converge testing and post-processing
+of the simulation results, in close interaction with the experimental and
+simulation teams from SPARC LAB. Any data analysis scripts developed in the
+process, as well as the simulation data itself will be released open-source
+for the benefit of the community. Also during this time I plan to start some
+simulations for preliminary ELI-NP experiments which might share some of the
+previously-described workflow.
 
 On *week 8* I will start writing down a draft (eventually leading to
 peer-reviewed publication) detailing the analyzed data up to that point and
