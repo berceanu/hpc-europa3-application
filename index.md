@@ -107,19 +107,31 @@ information.
 A further goal of the project is to improve the trapping and general
 properties of the electron beam. For example, the beam emittance could be
 improved by using different injection schemes such as self-truncated
-ionization injection [ref] by adding a small percentage of Nitrogen doping to
-the Helium gas. The beam energy could be increased by using a capillary to
-guide the laser pulse over a longer propagating distance, up to a few
-centimeters, at a lower plasma density.
+ionization injection [M. Zeng, Physics of Plasmas 21 (3), 030701 (2014)],
+experimentally demonstrated in [M. Mirzaie, et. al, Scientific Reports 5,
+14659 (2015)] and [J. P. Couperus et. al, Nature Communications 8 (1) 487
+(2017)]. Ionization injection can be achieved by adding a small percentage of
+Nitrogen doping to the Helium gas, and the truncation effect is due to the
+subsequent beam-loading. The beam energy could also be increased, leading to
+a higher critical energy in the betatron spectrum. One way to do this is by
+using a capillary to guide the laser pulse over a propagating distance much
+longer than the Rayleigh length, of up to a few centimeters, at a lower
+plasma density. Another appoach is to optimize the laser and plasma
+parameters to obtain a better self-guiding of the laser (above the critical
+power) inside the gas jet, leading to an incresed propagation distance.
 
 ### 1.3. Contribution to research field development
 
-
+- publication
+- release simulation data and analysis tools open source
+- develop technique for measuring the angularly-resolved betatron emission spectrum?
 
 ## 2. Case for HPC-Europa3 funding
 
 ### 2.1. Research benefits of accessing HPC-Europa systems[^2]
 
+- increased propagation length
+- calculate radiation spectrum
 
 
 
