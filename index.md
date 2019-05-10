@@ -141,6 +141,17 @@ insights.
 
 ### 2.1. Research benefits of accessing HPC-Europa systems[^2]
 
+We estimate that the large scale simulations relevant for experiments will
+make use of ... nodes, with a total of ... Tesla ... cards. The typical
+runtime per simulation should be between 1 week to 10 days for one set of
+parameters, and we would probably require about 200k CPU-hours in order to
+properly explore the parameter space. As far as storage space is concerned, a
+single simulation can produce around 1 TB output, so transferring it over the
+network is not a viable option – we would need to do the post-processing
+locally, perhaps using CPU nodes. Finally, we would need a local contact
+person part-time assigned to this project and could respond in a timely
+manner to any technical difficulties that might arise.
+
 - increased propagation length
 - calculate radiation spectrum
 
@@ -203,23 +214,34 @@ separate code, for which a good starting candidate would be
 additional further development.
 
 On *weeks 5-8* I will undertake full-scale PIC simulation using `PIConGPU`,
-for the most promising parameter sets discovered during *week 4*. The
-production runs will be followed by converge testing and post-processing of
-the simulation results, in close interaction with the experimental and
-simulation teams from SPARC LAB. Any data analysis scripts developed in the
-process, as well as the simulation data itself will be released open-source
-for the benefit of the community. Also during this time I plan to start some
-simulations for preliminary ELI-NP experiments which might share some of the
-previously-described workflow.
+for the most promising parameter sets discovered during *week 4*. PIConGPU
+[Bussmann et. al, Proc. Int. Conf. on HPC, Networking, Storage and Analysis,
+(2013)], a fully relativistic 3D3V code running on graphic processing units
+(GPUs). The code is open source, with a GPL license, and developed by the
+Junior Group Computational Radiation Physics at the Institute for Radiation
+Physics at HZDR in close collaboration with the Center for Information
+Services and High Performance Computing (ZIH) of the Technical University
+Dresden. PIConGPU is a parallel code, using message parsing (MPI) to
+communicate between various GPUs and Alpaka, an abstraction library for
+parallel kernel acceleration based on CUDA, at the single-GPU level. Due to
+the large memory required for simulating scenarios relevant to the current
+laser-plasma experiments, PIConGPU has to be run on multiple GPUs, with the
+simulation domain split up between them. The production runs will be followed
+by converge testing and post-processing of the simulation results, in close
+interaction with the experimental and simulation teams from SPARC LAB. Any
+data analysis scripts developed in the process, as well as the simulation
+data itself will be released open-source for the benefit of the community.
+Also during this time I plan to start some simulations for preliminary ELI-NP
+experiments which might share some of the previously-described workflow.
 
 On *week 8* I will start writing down a draft (eventually leading to
-peer-reviewed publication) containing the analyzed data up to that point and
+peer-reviewed publication) detailing the analyzed data up to that point and
 any preliminary conclusions that might be reached by combining experimental
 data with the results of numerical modelling.
 
-The numerical simulations will then continue until the expiration date of the
-HPC cluster account, ~6 months after the initial visit.
-
+The numerical simulations and data analysis will then continue until the
+expiration date of the HPC cluster account, ~6 months after the initial
+visit.
 
 [^1]: The whole proposal should contain around 16k characters, or roughly 5 pages.
 [^2]: Justify the necessity to *simulate larger systems* for the problem being
