@@ -1,6 +1,6 @@
 # Laser-wakefield radiation sources as diagnostic tools  
 
-Document source on [GitHub](https://github.com/berceanu/hpc-europa3-application).
+Document source on [GitHub](https://github.com/berceanu/hpc-europa3-application/blob/master/index.md).
 
 ## 1. Background information[^1]
 
