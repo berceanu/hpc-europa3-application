@@ -1,6 +1,8 @@
-% Laser-wakefield radiation sources as diagnostic tools
-% A. C. Berceanu
-% 13 May 2019
+---
+title: Laser-wakefield radiation sources as diagnostic tools
+author: A. C. Berceanu
+date: 13 May 2019
+---
 
 Document source on
 [GitHub](https://github.com/berceanu/hpc-europa3-application/blob/master/index.md).
@@ -32,7 +34,7 @@ cavity. This allows one to use much shorter acceleration distances, on the
 order of centimeters (instead of kilometers) and achieve similar energies, with
 the current state of the art of a few GeV. This acceleration process goes by
 the name of laser wakefield acceleration (LWFA), due to the wake that the laser
-leaves behind it in the plasma. A breakthrough occured in 2004, when Pukhov and
+leaves behind it in the plasma. A breakthrough occurred in 2004, when Pukhov and
 coworkers [Plasma physics and controlled fusion, 46 (2004)], using numerical
 simulations, discovered a new regime of LWFA: the so-called “bubble” regime,
 allowing for the first time the production of mono-energetic electron bunches
@@ -48,7 +50,7 @@ plasma into this cavity, ranging from self-injection (simplest) to ionization
 and colliding pulse injection. The bubble is positively charged due to the
 background ions, and it has a linear accelerating field along the laser
 propagation direction, as well as radial focusing fields, which help keep the
-electron bunch emittance low. Unde the action of the radial fields, the
+electron bunch emittance low. Under the action of the radial fields, the
 injected electrons which are deviated from the propagation axis start to
 oscillate around it, emitting synchrotron radiation, technically know as
 betatron radiation. The mechanism of radiation emission is similar to what
@@ -85,15 +87,16 @@ Beams 20, 012801 (2017)], the same group reconstructed both the beam profile,
 as well as the radial emittance of the electron beam, finally obtaining the
 trace-space density of the beam.
 
-Both these experiments we perfomed using a pure Helium gas jet, with the FLAME
-laser with operating at 1 J pulse energy, 30 fs FWHM@intensity pulse duration.
-The electrons reached $\sim 300$ MeV energies in an accelerating length
-$\gtrapprox 1$ mm. These studies used a 1D model, assuming a cylindrically
-symetric electron bunch distribution. Our objective is to extend this work to
-the 2D case, allowing one to reconstruct the 2D emittance and spatial bunch
-profile. This would require an angularly-resolved measurement of the betatron
-emission spectrum and electron energy spectrum, as well as large scale
-numerical modelling using the PIC method.
+Both these experiments we performed using a pure Helium gas jet, with the FLAME
+laser [F.G. Bisesto et. al, Nucl. Instrum. Methods Phys. Res. A 909, 452
+(2018)] operating at 1 J pulse energy, 30 fs FWHM@intensity pulse
+duration. The electrons reached $\sim 300$ MeV energies in an accelerating
+length $\gtrapprox 1$ mm. These studies used a 1D model, assuming a
+cylindrically symetric electron bunch distribution. Our objective is to extend
+this work to the 2D case, allowing one to reconstruct the 2D emittance and
+spatial bunch profile. This would require an angularly-resolved measurement of
+the betatron emission spectrum and electron energy spectrum, as well as large
+scale numerical modelling using the PIC method.
 
 A preliminary experimental setup is shown in the attached image. The laser beam
 (red) is focused by the off-axis parabola (OAP) down to a few micrometers spot
@@ -118,14 +121,14 @@ beam-loading. The beam energy could also be increased, leading to a higher
 critical energy in the betatron spectrum. One way to do this is by using a
 capillary to guide the laser pulse over a propagating distance much longer than
 the Rayleigh length, of up to a few centimeters, at a lower plasma density.
-Another appoach is to optimize the laser and plasma parameters to obtain a
+Another approach is to optimize the laser and plasma parameters to obtain a
 better self-guiding of the laser (above the critical power) inside the gas jet,
-leading to an incresed propagation distance.
+leading to an increased propagation distance.
 
 The experimental developments are strongly coupled with large-scale numeric
 simulations, which serve a dual purpose. The first one is to guide the choice
 of laser (energy, duration, beam profile etc) and plasma (density, profile etc)
-parameters for the experimental campaing in order to optimize the accelerated
+parameters for the experimental campaign in order to optimize the accelerated
 electron beam's quality and shot-to-shot reproducibility, as well as maximize
 its energy. The second purpose of the numeric modelling would be to confront
 and interpret the experimental data, leading to new physical insights.
@@ -144,6 +147,8 @@ and interpret the experimental data, leading to new physical insights.
 ### 2.1. Research benefits of accessing HPC-Europa systems[^2]
 
 - my previous HPC experience
+
+
 
 We estimate that the large scale simulations relevant for experiments will make
 use of ... nodes, with a total of ... Tesla ... cards. The typical runtime per
@@ -170,7 +175,7 @@ Together with a recently-developed hydrogen discharge capillary, this allows
 for very flexible setups in both laser wakefield (LWFA) as well as plasma
 wakefield (PWFA) experiments. Meanwhile, the ELI-NP project is still in its
 implementation phase, with preliminary experiments being scheduled for later
-this year, so we would definately benefit from the extensive expertise of the
+this year, so we would definitely benefit from the extensive expertise of the
 Frascati group in the design and planning of future experiments. On the other
 hand, both groups would benefit from large-scale laser-plasma simulations using
 the particle-in-cell method for a better understanding of the fast dynamical
@@ -182,7 +187,7 @@ collaboration between our research groups, with subsequent bilateral visits.
 
 ### 3.1. List of specific objectives and approximate timeline
 
-On *week 1*, I will get better aquinted with the research activities and
+On *week 1*, I will get better acquainted with the research activities and
 personnel at SPARC LAB, sort out any unforseen logistic problems and proceed to
 install the `fbpic` and `PIConGPU` particle-in-cell codes on the cluster
 provided by hpc-Europa and perform preliminary test runs, comparing results to
@@ -206,7 +211,7 @@ using the `fbpic` code [R. Lehe et. al, Comp. Phys. Comm. 203, 66 (2016)].
 `fbpic` is a spectral, quasi-3D PIC code which also has a reduced envelope
 model for the laser and as such, is well suited to quick parameter scans of
 setups which benefit from cylindrical symmetry. Typically, uses a large number
-of GPUs simulatenously for such a scan, each GPU assigned to an individual
+of GPUs simultaneously for such a scan, each GPU assigned to an individual
 start-to-end simulation for a given parameter set. Since the parameter sets are
 independent, there is no need for inter-GPU communication in this case.
 However, since the `fbpic` code doesn't (yet) contain a plugin for calculating
@@ -226,7 +231,7 @@ Junior Group Computational Radiation Physics at the Institute for Radiation
 Physics at HZDR in close collaboration with the Center for Information Services
 and High Performance Computing (ZIH) of the Technical University Dresden.
 `PIConGPU` is a parallel code, using message parsing (MPI) to communicate
-between various GPUs and Alpaka, an abstraction library for parallel kernel
+between various GPUs and `Alpaka`, an abstraction library for parallel kernel
 acceleration based on CUDA, at the single-GPU level. Due to the large memory
 required for simulating scenarios relevant to the current laser-plasma
 experiments, `PIConGPU` has to be run on multiple GPUs, with the simulation
@@ -249,6 +254,8 @@ The numerical simulations and data analysis will then continue until the
 expiration date of the HPC cluster account, ~6 months after the initial visit.
 
 [^1]: The whole proposal should contain around 16k characters, or roughly 5
-pages. [^2]: Justify the necessity to *simulate larger systems* for the problem
+pages.
+
+[^2]: Justify the necessity to *simulate larger systems* for the problem
 being studied and demonstrate that the resources to which you currently have
 access are *inadequate* for this.
