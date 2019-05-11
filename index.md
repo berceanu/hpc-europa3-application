@@ -92,7 +92,7 @@ laser [F.G. Bisesto et. al, Nucl. Instrum. Methods Phys. Res. A 909, 452
 (2018)] operating at 1 J pulse energy, 30 fs FWHM@intensity pulse
 duration. The electrons reached $\sim 300$ MeV energies in an accelerating
 length $\gtrapprox 1$ mm. These studies used a 1D model, assuming a
-cylindrically symetric electron bunch distribution. Our objective is to extend
+cylindrically symmetric electron bunch distribution. Our objective is to extend
 this work to the 2D case, allowing one to reconstruct the 2D emittance and
 spatial bunch profile. This would require an angularly-resolved measurement of
 the betatron emission spectrum and electron energy spectrum, as well as large
@@ -146,20 +146,23 @@ and interpret the experimental data, leading to new physical insights.
 
 ### 2.1. Research benefits of accessing HPC-Europa systems[^2]
 
-- my previous HPC experience
+My previous HPC experience with particle-in-cell codes includes running
+`PIConGPU` on the [HYPNOS](https://www.hzdr.de/db/Cms?pOid=12231&pNid=852) HPC
+cluster at the Helmholtz Zentrum Dresden Rossendorf, which consists of 9
+GPU-compute nodes with a dual Intel 8-Core Xeon@2.4 GHz CPU, 256 GB RAM and 4 x
+Nvidia K80 GPUs per node. During my access time I was impressed by the order of
+magnitude increase in performance over previous CPU-versions of PIC codes. We
+estimate that the large scale simulations relevant for this project will
+require at least a similar computational power. Unfortunately, for the time
+being our institute can only provide local access to a CPU-based grid with ~300
+cores, which proves insufficient for 3D laser-plasma simulations.
 
-
-
-We estimate that the large scale simulations relevant for experiments will make
-use of ... nodes, with a total of ... Tesla ... cards. The typical runtime per
-simulation should be between 1 week to 10 days for one set of parameters, and
-we would probably require about 200k CPU-hours in order to properly explore the
-parameter space. As far as storage space is concerned, a single simulation can
-produce around 1 TB output, so transferring it over the network is not a viable
-option – we would need to do the post-processing locally, perhaps using CPU
-nodes. Finally, we would need a local contact person part-time assigned to this
-project and could respond in a timely manner to any technical difficulties that
-might arise.
+The typical runtime per simulation should be between 1 week to 10 days for one
+set of parameters, and we would probably require about 200k CPU-hours in order
+to properly explore the parameter space. As far as storage space is concerned,
+a single simulation can produce around 1 TB output, so transferring it over the
+network is not a viable option – we would need to do the post-processing
+locally, perhaps using CPU nodes.
 
 - increased propagation length
 - calculate radiation spectrum
