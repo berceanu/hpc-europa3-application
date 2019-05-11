@@ -1,4 +1,6 @@
-# Laser-wakefield radiation sources as diagnostic tools  
+% Laser-wakefield radiation sources as diagnostic tools
+% A. C. Berceanu
+% 13 May 2019
 
 Document source on
 [GitHub](https://github.com/berceanu/hpc-europa3-application/blob/master/index.md).
