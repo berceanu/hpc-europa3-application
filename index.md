@@ -36,7 +36,7 @@ the current state of the art of a few GeV. This acceleration process goes by
 the name of laser wakefield acceleration (LWFA), due to the wake that the laser
 leaves behind it in the plasma. A breakthrough occurred in 2004, when Pukhov
 and coworkers [Plasma physics and controlled fusion, 46 (2004)], using
-numerical simulations, discovered a new regime of LWFA: the so-called “bubble”
+numerical simulations, discovered a new regime of LWFA: the so-called“bubble”
 regime, allowing for the first time the production of mono-energetic electron
 bunches that approach the quality of those obtained in conventional
 accelerators.
@@ -138,10 +138,10 @@ and interpret the experimental data, leading to new physical insights.
 
 The main deliverable of the project should be a peer-reviewed publication in a
 (preferably open access) scientific journal, combining the experimental results
-with numerical modelling in order to achieve the main project objectives.
-We will also release any data analysis tools and plugins developed in the
-process as open source software. The data produced by the large-scale simulations
-will also be released as self-documented HDF5/ADIOS files using the [openPMD
+with numerical modelling in order to achieve the main project objectives. We
+will also release any data analysis tools and plugins developed in the process
+as open source software. The data produced by the large-scale simulations will
+also be released as self-documented HDF5/ADIOS files using the [openPMD
 standard](https://github.com/openPMD/openPMD-standard). If time permits, we
 will also contribute to the development of the main particle-in-cell codes used
 in the production runs.
@@ -156,9 +156,10 @@ angularly the betatron spectrum emitted by the accelerated electron beam.
 My previous HPC experience with particle-in-cell codes includes running
 `PIConGPU` on the [HYPNOS](https://www.hzdr.de/db/Cms?pOid=12231&pNid=852) HPC
 cluster at the Helmholtz Zentrum Dresden Rossendorf, which comprises of 9
-GPU-compute nodes, each equipped with a dual Intel 8-Core Xeon@2.4 GHz CPU, 256 GB RAM and 4 x
-Nvidia K80 GPU cards. During my access time I was impressed by the order of
-magnitude increase in performance over popular CPU-based PIC codes.
+GPU-compute nodes, each equipped with a dual Intel 8-Core Xeon@2.4 GHz CPU, 256
+GB RAM and 4 x Nvidia K80 GPU cards. During my access time I was impressed by
+the order of magnitude increase in performance over popular CPU-based PIC
+codes.
 
 We estimate that the large scale simulations relevant for this project will at
 least require a comparable computational power, both in terms of TFLOPS as well
