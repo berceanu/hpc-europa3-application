@@ -142,9 +142,9 @@ with numerical modelling in order to achieve the main project objectives. We
 will also release any data analysis tools and plugins developed in the process
 as open source software. The data produced by the large-scale simulations will
 also be released as self-documented HDF5/ADIOS files using the [openPMD
-standard](https://github.com/openPMD/openPMD-standard). If time permits, we
-will also contribute to the development of the main particle-in-cell codes used
-in the production runs.
+standard](https://github.com/openPMD/openPMD-standard) for mesh-based metadata.
+If time permits, we will also contribute to the development of the main
+particle-in-cell codes used in the production runs.
 
 On the experimental side, we will implement a new technique for resolving
 angularly the betatron spectrum emitted by the accelerated electron beam.
@@ -170,7 +170,7 @@ project. A separate challenge is presented by the long propagation lengths (up
 to a few centimeters) that have to be modelled in the case of using the
 discharge capillary. While the background plasma dynamics should not be a
 problem, the injected electrons can experience various numerical instabilities
-for simulaitons of over $10^5$ time steps, under the influence of the numerical
+for simulaitons of over 100k time steps, under the influence of the numerical
 dispersion produced by the field solver. Mitigating such numerical effects
 would require a dramatic increase in both the temporal and longitudinal
 resolution, leading to increased computational times and larger memory demands
@@ -192,22 +192,24 @@ would need to do the post-processing locally, perhaps using CPU nodes.
 
 ### 2.2. Research benefits of interacting with my local scientific host
 
-I've met some of the members of the INFN-LNF SPARC LAB at at the recent CERN
-"High Gradient Wakefield Accelerator" school in Sesimbra (Portugal) and we soon
-discovered similar research topics with my group at ELI-NP. One of the key
-distinguishing features of SPARC LAB is the integration of a high-power,
-ultrashort Ti:Saph laser system (FLAME) with a high-brightness photo-injector.
-Together with a recently-developed hydrogen discharge capillary, this allows
-for very flexible setups in both laser wakefield (LWFA) as well as plasma
-wakefield (PWFA) experiments. Meanwhile, the ELI-NP project is still in its
-implementation phase, with preliminary experiments being scheduled for later
-this year, so we would definitely benefit from the extensive expertise of the
-Frascati group in the design and planning of future experiments. On the other
-hand, both groups would benefit from large-scale laser-plasma simulations using
-the particle-in-cell method for a better understanding of the fast dynamical
-phenomena that can't usually be resolved by conventional diagnostic tools. We
-envision this grant to be the perfect opportunity to start a long-lasting
-collaboration between our research groups, with subsequent bilateral visits.
+I've met some of the members of the INFN-LNF [SPARC LAB](
+http://w3.lnf.infn.it/lab/sparc_lab) at at the recent CERN ["High Gradient
+Wakefield Accelerator"](https://indico.cern.ch/event/759579) school in Sesimbra
+(Portugal) and we soon discovered similar research topics with my group at
+ELI-NP. One of the key distinguishing features of SPARC LAB is the integration
+of a high-power, ultrashort Ti:Saph laser system (FLAME) with a high-brightness
+photo-injector. Together with a recently-developed hydrogen discharge
+capillary, this allows for very flexible setups in both laser wakefield (LWFA)
+as well as plasma wakefield (PWFA) experiments. Meanwhile, the ELI-NP project
+is still in its implementation phase, with preliminary experiments being
+scheduled for later this year, so we would definitely benefit from the
+extensive expertise of the Frascati group in the design and planning of future
+experiments. On the other hand, both groups would benefit from large-scale
+laser-plasma simulations using the particle-in-cell method for a better
+understanding of the fast dynamical phenomena that can't usually be resolved by
+conventional diagnostic tools. We envision this grant to be the perfect
+opportunity to start a long-lasting collaboration between our research groups,
+with subsequent bilateral visits.
 
 ## 3. Weekly-based project workplan
 
