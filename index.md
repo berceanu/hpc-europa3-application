@@ -7,7 +7,7 @@ date: 13 May 2019
 Document source on
 [GitHub](https://github.com/berceanu/hpc-europa3-application/blob/master/index.md).
 
-## 1. Background information[^1]
+## 1. Background information
 
 ### 1.1. Status of my research activities
 
@@ -151,7 +151,7 @@ angularly the betatron spectrum emitted by the accelerated electron beam.
 
 ## 2. Case for HPC-Europa3 funding
 
-### 2.1. Research benefits of accessing HPC-Europa systems[^2]
+### 2.1. Research benefits of accessing HPC-Europa systems
 
 My previous HPC experience with particle-in-cell codes includes running
 `PIConGPU` on the [HYPNOS](https://www.hzdr.de/db/Cms?pOid=12231&pNid=852) HPC
@@ -165,7 +165,7 @@ We estimate that the large scale simulations relevant for this project will at
 least require a comparable computational power, both in terms of TFLOPS as well
 as total cumulated GPU memory. For the time being our institute can only
 provide local access to a CPU-based grid with ~300 cores, which proves
-insufficient for the type of 3D laser-plasma simulations necessary for this
+inadequate for the type of 3D laser-plasma simulations necessary for this
 project. A separate challenge is presented by the long propagation lengths (up
 to a few centimeters) that have to be modelled in the case of using the
 discharge capillary. While the background plasma dynamics should not be a
@@ -278,10 +278,3 @@ with the results of numerical modelling.
 
 The numerical simulations and data analysis will then continue until the
 expiration date of the HPC cluster account, ~6 months after the initial visit.
-
-[^1]: The whole proposal should contain around 16k characters, or roughly 5
-pages.
-
-[^2]: Justify the necessity to *simulate larger systems* for the problem
-being studied and demonstrate that the resources to which you currently have
-access are *inadequate* for this.
