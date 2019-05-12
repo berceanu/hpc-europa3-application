@@ -12,13 +12,13 @@ Document source on
 ### 1.1. Status of my research activities
 
 I completed my PhD in the field of theoretical condensed matter physics at
-Universidad Autonoma (Spain) and am currently a postdoctoral researcher at
-Extreme Light Infrastructure - Nuclear Physics (Romania). In my new role, I am
-focusing on theoretical/computational aspects of high power laser-plasma
-interaction, in particular accelerating particles to megaelectronvolt energies
-using plasma wakefields, with the goal of obtaining high-brilliance/high-energy
-secondary radiation sources with various applications in medical imaging, as
-well as fundamental research.
+Universidad Autónoma de Madrid (Spain) and am currently a postdoctoral
+researcher at Extreme Light Infrastructure - Nuclear Physics (Romania). In my
+new role, I am focusing on theoretical/computational aspects of high power
+laser-plasma interaction, in particular accelerating particles to
+megaelectronvolt energies using plasma wakefields, with the goal of obtaining
+high-brilliance/high-energy secondary radiation sources with various
+applications in medical imaging, as well as fundamental research.
 
 Tajima and Dawson’s seminal 1979 paper [Phys. Rev. Lett. 43 (4): 267–70,
 (1979)] first introduced the idea that particles could be accelerated to high
@@ -34,11 +34,12 @@ cavity. This allows one to use much shorter acceleration distances, on the
 order of centimeters (instead of kilometers) and achieve similar energies, with
 the current state of the art of a few GeV. This acceleration process goes by
 the name of laser wakefield acceleration (LWFA), due to the wake that the laser
-leaves behind it in the plasma. A breakthrough occurred in 2004, when Pukhov and
-coworkers [Plasma physics and controlled fusion, 46 (2004)], using numerical
-simulations, discovered a new regime of LWFA: the so-called “bubble” regime,
-allowing for the first time the production of mono-energetic electron bunches
-that approach the quality of those obtained in conventional accelerators.
+leaves behind it in the plasma. A breakthrough occurred in 2004, when Pukhov
+and coworkers [Plasma physics and controlled fusion, 46 (2004)], using
+numerical simulations, discovered a new regime of LWFA: the so-called “bubble”
+regime, allowing for the first time the production of mono-energetic electron
+bunches that approach the quality of those obtained in conventional
+accelerators.
 
 This discovery was quickly confirmed by three experiments [Nature 431:541
 (2004), Nature 431:535 (2004), Nature 431:538 (2004)]. In the bubble regime,
@@ -89,14 +90,14 @@ trace-space density of the beam.
 
 Both these experiments we performed using a pure Helium gas jet, with the FLAME
 laser [F.G. Bisesto et. al, Nucl. Instrum. Methods Phys. Res. A 909, 452
-(2018)] operating at 1 J pulse energy, 30 fs FWHM@intensity pulse
-duration. The electrons reached $\sim 300$ MeV energies in an accelerating
-length $\gtrapprox 1$ mm. These studies used a 1D model, assuming a
-cylindrically symmetric electron bunch distribution. Our objective is to extend
-this work to the 2D case, allowing one to reconstruct the 2D emittance and
-spatial bunch profile. This would require an angularly-resolved measurement of
-the betatron emission spectrum and electron energy spectrum, as well as large
-scale numerical modelling using the PIC method.
+(2018)] operating at 1 J pulse energy, 30 fs FWHM@intensity pulse duration. The
+electrons reached $\sim 300$ MeV energies in an accelerating length $\gtrapprox
+1$ mm. These studies used a 1D model, assuming a cylindrically symmetric
+electron bunch distribution. Our objective is to extend this work to the 2D
+case, allowing one to reconstruct the 2D emittance and spatial bunch profile.
+This would require an angularly-resolved measurement of the betatron emission
+spectrum and electron energy spectrum, as well as large scale numerical
+modelling using the PIC method.
 
 A preliminary experimental setup is shown in the attached image. The laser beam
 (red) is focused by the off-axis parabola (OAP) down to a few micrometers spot
@@ -135,12 +136,18 @@ and interpret the experimental data, leading to new physical insights.
 
 ### 1.3. Contribution to research field development
 
-- publication
-- release simulation data in self-documented format such as hdf5 + OpenPMD
-- release developed analysis tools open source
-- if time permits, contribute to PIC codes
-- develop technique for measuring the angularly-resolved betatron emission
-  spectrum?
+The main deliverable of the project should be a peer-reviewed publication in a
+(preferably open access) scientific journal, combining the experimental results
+with numerical modelling in order to achieve the main project objectives.
+We will also release any data analysis tools and plugins developed in the
+process as open source software. The data produced by the large-scale simulations
+will also be released as self-documented HDF5/ADIOS files using the [openPMD
+standard](https://github.com/openPMD/openPMD-standard). If time permits, we
+will also contribute to the development of the main particle-in-cell codes used
+in the production runs.
+
+On the experimental side, we will implement a new technique for resolving
+angularly the betatron spectrum emitted by the accelerated electron beam.
 
 ## 2. Case for HPC-Europa3 funding
 
