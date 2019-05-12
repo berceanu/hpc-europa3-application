@@ -155,24 +155,39 @@ angularly the betatron spectrum emitted by the accelerated electron beam.
 
 My previous HPC experience with particle-in-cell codes includes running
 `PIConGPU` on the [HYPNOS](https://www.hzdr.de/db/Cms?pOid=12231&pNid=852) HPC
-cluster at the Helmholtz Zentrum Dresden Rossendorf, which consists of 9
-GPU-compute nodes with a dual Intel 8-Core Xeon@2.4 GHz CPU, 256 GB RAM and 4 x
-Nvidia K80 GPUs per node. During my access time I was impressed by the order of
-magnitude increase in performance over previous CPU-versions of PIC codes. We
-estimate that the large scale simulations relevant for this project will
-require at least a similar computational power. Unfortunately, for the time
-being our institute can only provide local access to a CPU-based grid with ~300
-cores, which proves insufficient for 3D laser-plasma simulations.
+cluster at the Helmholtz Zentrum Dresden Rossendorf, which comprises of 9
+GPU-compute nodes, each equipped with a dual Intel 8-Core Xeon@2.4 GHz CPU, 256 GB RAM and 4 x
+Nvidia K80 GPU cards. During my access time I was impressed by the order of
+magnitude increase in performance over popular CPU-based PIC codes.
 
-The typical runtime per simulation should be between 1 week to 10 days for one
-set of parameters, and we would probably require about 200k CPU-hours in order
-to properly explore the parameter space. As far as storage space is concerned,
-a single simulation can produce around 1 TB output, so transferring it over the
-network is not a viable option – we would need to do the post-processing
-locally, perhaps using CPU nodes.
+We estimate that the large scale simulations relevant for this project will at
+least require a comparable computational power, both in terms of TFLOPS as well
+as total cumulated GPU memory. For the time being our institute can only
+provide local access to a CPU-based grid with ~300 cores, which proves
+insufficient for the type of 3D laser-plasma simulations necessary for this
+project. A separate challenge is presented by the long propagation lengths (up
+to a few centimeters) that have to be modelled in the case of using the
+discharge capillary. While the background plasma dynamics should not be a
+problem, the injected electrons can experience various numerical instabilities
+for simulaitons of over $10^5$ time steps, under the influence of the numerical
+dispersion produced by the field solver. Mitigating such numerical effects
+would require a dramatic increase in both the temporal and longitudinal
+resolution, leading to increased computational times and larger memory demands
+for storing the electromagnetic fields.
 
-- increased propagation length
-- calculate radiation spectrum
+The calculation of the far-field angularly- and spectrally-resolved betatron
+emission spectrum, which could be done in situ on the GPUs, using the radiation
+plugin develop by R. Pausch et. al for the `PIConGPU` code, also contributes to
+increasing the computational time of a typical production run. Therefore, the
+runtime per simulation should be between 1 week to 10 days for each parameter
+set, and we would probably require around 200k CPU-hours in order to properly
+explore the parameter space. Assuming every GPU is assigned to 18 CPU cores,
+that would translate into ~11k GPU-hours, which is roughly 2 large-scale
+production runs using 30 GPUs simultaneously.
+
+As far as storage space is concerned, a single simulation can produce around 1
+TB output, so transferring it over the network is not a viable option – we
+would need to do the post-processing locally, perhaps using CPU nodes.
 
 ### 2.2. Research benefits of interacting with my local scientific host
 
