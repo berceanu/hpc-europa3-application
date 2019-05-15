@@ -147,7 +147,14 @@ If time permits, we will also contribute to the development of the main
 particle-in-cell codes used in the production runs.
 
 On the experimental side, we will implement a new technique for resolving
-angularly the betatron spectrum emitted by the accelerated electron beam.
+angularly the betatron spectrum emitted by the accelerated electron beam and
+extend our previous work to the 2D case. The main task will regard the study of
+the geometry and material for a custom X-Ray filter to install in front of the
+detector. Despite the homogeneous aluminium foil employed in the last
+experimental campaign, we will need an attenuation depending on the transverse
+coordinate. In this way, relying on the fact that different material
+thicknesses can stop different photon energies, we can reconstruct the betatron
+spectrum resolving the angular dependence.
 
 ## 2. Case for HPC-Europa3 funding
 
@@ -219,7 +226,8 @@ On *week 1*, I will get better acquainted with the research activities and
 personnel at SPARC LAB, sort out any unforseen logistic problems and proceed to
 install the `fbpic` and `PIConGPU` particle-in-cell codes on the cluster
 provided by hpc-Europa and perform preliminary test runs, comparing results to
-well-know analytical solutions.
+well-know analytical solutions. I will also develop an `fbpic` -
+[`signac`](https://signac.io/) interface which we will use in *week 4*.
 
 On *week 2*, I will calibrate and test the newly installed PIC codes by
 reproducing the previously published results from [A. Curcio et. al, Appl.
