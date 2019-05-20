@@ -96,7 +96,7 @@ electrons reached $\sim 300$ MeV energies in an accelerating length $\gtrapprox
 electron bunch distribution. Our objective is to extend this work to the 2D
 case, allowing one to reconstruct the 2D emittance and spatial bunch profile.
 This would require an angularly-resolved measurement of the betatron emission
-spectrum and electron energy spectrum, as well as large scale numerical
+spectrum and electron energy spectrum, as well as numerical
 modelling using the PIC method.
 
 A preliminary experimental setup is shown in the attached image. The laser beam
@@ -126,25 +126,25 @@ Another approach is to optimize the laser and plasma parameters to obtain a
 better self-guiding of the laser (above the critical power) inside the gas jet,
 leading to an increased propagation distance.
 
-The experimental developments are strongly coupled with large-scale numeric
+The experimental developments are strongly coupled with numeric
 simulations, which serve a dual purpose. The first one is to guide the choice
 of laser (energy, duration, beam profile etc) and plasma (density, profile etc)
 parameters for the experimental campaign in order to optimize the accelerated
 electron beam's quality and shot-to-shot reproducibility, as well as maximize
-its energy. The second purpose of the numeric modelling would be to confront
-and interpret the experimental data, leading to new physical insights.
+its energy. The second purpose of the numeric modelling would be to 
+interpret the experimental data, leading to new physical insights.
 
 ### 1.3. Contribution to research field development
 
-The main deliverable of the project should be a peer-reviewed publication in a
+The main deliverable of the project could be a peer-reviewed publication in a
 (preferably open access) scientific journal, combining the experimental results
 with numerical modelling in order to achieve the main project objectives. We
 will also release any data analysis tools and plugins developed in the process
 as open source software. The data produced by the large-scale simulations will
 also be released as self-documented HDF5/ADIOS files using the [openPMD
 standard](https://github.com/openPMD/openPMD-standard) for mesh-based metadata.
-If time permits, we will also contribute to the development of the main
-particle-in-cell codes used in the production runs.
+If time permits, we will also contribute to the development of the used
+particle-in-cell codes.
 
 On the experimental side, we will implement a new technique for resolving
 angularly the betatron spectrum emitted by the accelerated electron beam and
@@ -177,25 +177,23 @@ project. A separate challenge is presented by the long propagation lengths (up
 to a few centimeters) that have to be modelled in the case of using the
 discharge capillary. While the background plasma dynamics should not be a
 problem, the injected electrons can experience various numerical instabilities
-for simulaitons of over 100k time steps, under the influence of the numerical
+for simulations of over 100k time steps, under the influence of the numerical
 dispersion produced by the field solver. Mitigating such numerical effects
 would require a dramatic increase in both the temporal and longitudinal
 resolution, leading to increased computational times and larger memory demands
 for storing the electromagnetic fields.
 
 The calculation of the far-field angularly- and spectrally-resolved betatron
-emission spectrum, which could be done in situ on the GPUs, using the radiation
-plugin develop by R. Pausch et. al for the `PIConGPU` code, also contributes to
+emission spectrum, which could be done by post-processing the , also contributes to
 increasing the computational time of a typical production run. Therefore, the
 runtime per simulation should be between 1 week to 10 days for each parameter
-set, and we would probably require around 200k CPU-hours in order to properly
+set, and we would probably require around 100k CPU-hours in order to properly
 explore the parameter space. Assuming every GPU is assigned to 18 CPU cores,
-that would translate into ~11k GPU-hours, which is roughly 2 large-scale
-production runs using 30 GPUs simultaneously.
+that would translate into ~5k GPU-hours, on 10 K80 GPUs.
 
-As far as storage space is concerned, a single simulation can produce around 1
-TB output, so transferring it over the network is not a viable option – we
-would need to do the post-processing locally, perhaps using CPU nodes.
+As far as storage space is concerned, a single simulation can produce around 300
+GB output, so transferring it over the network is not a viable option – we
+would need to do the post-processing locally, perhaps using some CPU nodes.
 
 ### 2.2. Research benefits of interacting with my local scientific host
 
@@ -224,12 +222,12 @@ with subsequent bilateral visits.
 
 On *week 1*, I will get better acquainted with the research activities and
 personnel at SPARC LAB, sort out any unforseen logistic problems and proceed to
-install the `fbpic` and `PIConGPU` particle-in-cell codes on the cluster
+install the `fbpic` particle-in-cell code on the cluster
 provided by hpc-Europa and perform preliminary test runs, comparing results to
 well-know analytical solutions. I will also develop an `fbpic` -
 [`signac`](https://signac.io/) interface which we will use in *week 4*.
 
-On *week 2*, I will calibrate and test the newly installed PIC codes by
+On *week 2*, I will calibrate and test the newly installed PIC code by
 reproducing the previously published results from [A. Curcio et. al, Appl.
 Phys. Lett. 111, 133105 (2017), A. Curcio et. al, Phys. Rev. Accel. Beams 20,
 012801 (2017)]. This would also allow a better understanding of the underlying
@@ -258,28 +256,19 @@ a good starting candidate would be
 [`synchrad`](https://github.com/hightower8083/synchrad), perhaps with
 additional further development.
 
-On *weeks 5-8* I will undertake full-scale PIC simulations using `PIConGPU`,
-for the most promising parameter sets discovered during *week 4*. `PIConGPU`
-[Bussmann et. al, Proc. Int. Conf. on HPC, Networking, Storage and Analysis,
-(2013)], a fully relativistic 3D3V code running on graphic processing units
-(GPUs). The code is open source, with a GPL license, and developed by the
-Junior Group Computational Radiation Physics at the Institute for Radiation
-Physics at HZDR in close collaboration with the Center for Information Services
-and High Performance Computing (ZIH) of the Technical University Dresden.
-`PIConGPU` is a parallel code, using message parsing (MPI) to communicate
-between various GPUs and `Alpaka`, an abstraction library for parallel kernel
-acceleration based on CUDA, at the single-GPU level. Due to the large memory
-required for simulating scenarios relevant to the current laser-plasma
-experiments, `PIConGPU` has to be run on multiple GPUs, with the simulation
-domain split up between them.
+On *weeks 5-8* I will undertake full-scale PIC simulations using `fbpic`, for
+the most promising parameter sets discovered during *week 4*. Due to the large
+memory required for simulating scenarios relevant to the current laser-plasma
+experiments, `fbpic` has to be run on multiple GPUs, with the simulation domain
+split up between them (domain decomposition). Also during this time I plan to
+start some simulations for preliminary ELI-NP experiments which will share
+most of the previously-described workflow.
 
 The production runs will be followed by converge testing and post-processing of
 the simulation results, in close interaction with the experimental and
 simulation teams from SPARC LAB. Any data analysis scripts developed in the
 process, as well as the simulation data itself will be released open-source for
-the benefit of the community. Also during this time I plan to start some
-simulations for preliminary ELI-NP experiments which might share some of the
-previously-described workflow.
+the benefit of the community. 
 
 On *week 8* I will start writing down a draft (eventually leading to
 peer-reviewed publication) detailing the analyzed data up to that point and any
